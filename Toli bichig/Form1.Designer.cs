@@ -32,6 +32,10 @@
             cmbLanguage = new ComboBox();
             btnSearch = new Button();
             dgvWords = new DataGridView();
+            colNumber = new DataGridViewTextBoxColumn();
+            colEnglish = new DataGridViewTextBoxColumn();
+            colMongolian = new DataGridViewTextBoxColumn();
+            colRussian = new DataGridViewTextBoxColumn();
             lblEnglish = new Label();
             lblMongolian = new Label();
             lblRussian = new Label();
@@ -40,10 +44,6 @@
             txtEnglish = new TextBox();
             lblLanguage = new Label();
             lblWordsTitle = new Label();
-            colNumber = new DataGridViewTextBoxColumn();
-            colEnglish = new DataGridViewTextBoxColumn();
-            colMongolian = new DataGridViewTextBoxColumn();
-            colRussian = new DataGridViewTextBoxColumn();
             lblSavedTitle = new Label();
             lblSavedHeader = new Label();
             lstSaved = new ListBox();
@@ -98,6 +98,34 @@
             dgvWords.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvWords.Size = new Size(583, 483);
             dgvWords.TabIndex = 4;
+            // 
+            // colNumber
+            // 
+            colNumber.HeaderText = "№";
+            colNumber.MinimumWidth = 6;
+            colNumber.Name = "colNumber";
+            colNumber.ReadOnly = true;
+            // 
+            // colEnglish
+            // 
+            colEnglish.HeaderText = "Англи";
+            colEnglish.MinimumWidth = 6;
+            colEnglish.Name = "colEnglish";
+            colEnglish.ReadOnly = true;
+            // 
+            // colMongolian
+            // 
+            colMongolian.HeaderText = "Монгол";
+            colMongolian.MinimumWidth = 6;
+            colMongolian.Name = "colMongolian";
+            colMongolian.ReadOnly = true;
+            // 
+            // colRussian
+            // 
+            colRussian.HeaderText = "Орос";
+            colRussian.MinimumWidth = 6;
+            colRussian.Name = "colRussian";
+            colRussian.ReadOnly = true;
             // 
             // lblEnglish
             // 
@@ -166,34 +194,6 @@
             lblWordsTitle.Size = new Size(131, 28);
             lblWordsTitle.TabIndex = 12;
             lblWordsTitle.Text = "toli.db .words";
-            // 
-            // colNumber
-            // 
-            colNumber.HeaderText = "№";
-            colNumber.MinimumWidth = 6;
-            colNumber.Name = "colNumber";
-            colNumber.ReadOnly = true;
-            // 
-            // colEnglish
-            // 
-            colEnglish.HeaderText = "Англи";
-            colEnglish.MinimumWidth = 6;
-            colEnglish.Name = "colEnglish";
-            colEnglish.ReadOnly = true;
-            // 
-            // colMongolian
-            // 
-            colMongolian.HeaderText = "Монгол";
-            colMongolian.MinimumWidth = 6;
-            colMongolian.Name = "colMongolian";
-            colMongolian.ReadOnly = true;
-            // 
-            // colRussian
-            // 
-            colRussian.HeaderText = "Орос";
-            colRussian.MinimumWidth = 6;
-            colRussian.Name = "colRussian";
-            colRussian.ReadOnly = true;
             // 
             // lblSavedTitle
             // 
@@ -313,7 +313,7 @@
             MinimumSize = new Size(1000, 700);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "\tГурван хэлний толь бичиг";
+            Text = "Гурван хэлний толь бичиг";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dgvWords).EndInit();
             ResumeLayout(false);
